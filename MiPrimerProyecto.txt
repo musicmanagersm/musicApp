@@ -1,0 +1,24 @@
+public class GestionAutorizacion : AuthorizeAttribute
+    {
+        protected override bool AuthorizeCore(HttpContextBase httpContext)
+        {
+            var autorizado = true;
+            //var autorizado = false;
+            //if (httpContext.Session["RecursosPorRol"] != null)
+            //{
+            //    var recursosPorRol = httpContext.Session["RecursosPorRol"] as List<RecursosPorRolModel>;
+            //    var httpMethod = httpContext.Request.RequestContext.HttpContext.Request.HttpMethod;
+            //    if (!httpMethod.ToUpper().Equals("GET"))
+            //        return true;
+            //    var datosRequest = httpContext.Request.RequestContext.RouteData;
+            //    var actualControlador = datosRequest.GetRequiredString("controller");
+            //    var actualAccion = datosRequest.GetRequiredString("action");
+            //    if (recursosPorRol != null)
+            //    {
+            //        var result = recursosPorRol.Where(rp => rp.Controlador.Equals(actualControlador) && rp.Accion.Equals(actualAccion)).SingleOrDefault();
+            //        if (result != null)
+            //            autorizado = true;
+            //    }
+            //}
+            return autorizado;
+        }
